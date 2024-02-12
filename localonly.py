@@ -10,9 +10,7 @@ model_list = []
 for model in models["models"]:
     model_list.append(model["name"])
 
-selected_model = st.selectbox(
-    "Select a model",
-    model_list)
+selected_model = st.selectbox("Select a model", model_list)
 
 model = Ollama(model=selected_model)
 
